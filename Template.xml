@@ -123,7 +123,7 @@ list-style:none
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@63f25038f11e35159396ede341bd31f6988e724a/app.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@a975265cc2681eac2013391e05994f175f23dfb0/app.css" />
 
 </b:includable>
 <b:includable id='jsx'>
@@ -136,7 +136,7 @@ list-style:none
 import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
 </script>
 
-<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@63f25038f11e35159396ede341bd31f6988e724a/app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@a975265cc2681eac2013391e05994f175f23dfb0/app.js"></script>
 </b:includable>						
 </b:defaultmarkup>	
 <b:defaultmarkup type='FeaturedPost,PopularPosts'>
