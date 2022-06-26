@@ -6,7 +6,8 @@ button.close:focus{outline:none;box-shadow:none}
 .btn .bi{position:relative;top:0}
 .btn:focus,.btn.focus{box-shadow:none!important}
 #main{background:#fff}
-#main-header img{width:35px}
+#main-header .logo-only img{width:35px}
+#main-header .text-logo img{width:125px}
 #main-search button{border:1px solid #ced4da}
 #main-search input:focus{box-shadow:none;border-color:#ced4da}
 #main-nav .nav-link:hover,#main-nav .nav-link.active{background:#dff5ff}
