@@ -123,7 +123,7 @@
 
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@a975265cc2681eac2013391e05994f175f23dfb0/app.css" />
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@093dbcf6cc9457db271ddd8e8b5f1750c10e7b8d/app.css" />
 
 			</b:includable>
 			<b:includable id='jsx'>
@@ -136,7 +136,7 @@
 					import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
 				</script>
 
-				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@a975265cc2681eac2013391e05994f175f23dfb0/app.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@093dbcf6cc9457db271ddd8e8b5f1750c10e7b8d/app.js"></script>
 			</b:includable>						
 		</b:defaultmarkup>	
 		<b:defaultmarkup type='FeaturedPost,PopularPosts'>
@@ -399,7 +399,11 @@
 							</b:widget>
 							<b:widget cond='not data:view.search.query and not data:view.isPreview' id='HTML601' locked='true' title='Ads Top' type='HTML' version='2' visible='true'>
 								<b:widget-settings>
-									<b:widget-setting name='content'><![CDATA[ads top]]></b:widget-setting>
+									<b:widget-setting name='content'><![CDATA[<div class="text-center">
+										<a class="btn btn-primary" href="https://github.com/kurteyki/TemplateMantul/archive/refs/heads/main.zip" target="_blank" rel="nofollow">
+											<i class="bi bi-github"></i> Download
+										</a>
+									</div>]]></b:widget-setting>
 								</b:widget-settings>
 								<b:includable id='main'>      
 									<div class='ads-horizontal'>
