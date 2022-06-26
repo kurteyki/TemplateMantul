@@ -14,3 +14,11 @@ Blogger Template Mobile Layout, Mantul
 - Bootstrap 5
 - jQuery 3
 - Turbo Hotwired
+
+## Author
+Made By Irfan
+[Facebook](https://facebook.com/irfan.ycd)
+[Instagram](https://instagram.com/irfan.ycd)
+[Twitter](https://twitter.com/irfan.ycd)
+
+[Donate](https://tools.kurteyki.com/irfan.ycd)
