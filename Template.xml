@@ -349,7 +349,7 @@ import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
 <b:comment>Main Content</b:comment>
 <div id="main-content">
 <b:class cond='data:view.isMultipleItems AND data:widgets.Blog.first.posts.empty OR data:view.isError' name='m-auto'/>
-<b:section name='Main' showaddelement='true' id='main'>
+<b:section name='Main' showaddelement='false' id='main'>
 <b:widget cond='data:view.isHomepage' id='PopularPosts1' locked='true' title='Trending' type='PopularPosts' visible='true'>
 <b:widget-settings>
 <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
@@ -950,7 +950,7 @@ Sidebar
 </div>
 </div>
 
-<b:section name='Sidebar' showaddelement='false' id='widget-main-sidebar'>
+<b:section name='Sidebar' showaddelement='true' id='widget-main-sidebar'>
 <b:widget id='Profile1' locked='true' title='About Me' type='Profile' visible='true'>
 <b:widget-settings>
 <b:widget-setting name='showaboutme'>true</b:widget-setting>
