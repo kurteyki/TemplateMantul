@@ -1,0 +1,52 @@
+body{background:#f7f7f7}
+.bg-app{background:#dff5ff}
+
+/* button */
+button.close:focus{outline:none;box-shadow:none}
+.btn .bi{position:relative;top:0}
+.btn:focus,.btn.focus{box-shadow:none!important}
+#main{background:#fff}
+#main-header img{width:35px}
+#main-search button{border:1px solid #ced4da}
+#main-search input:focus{box-shadow:none;border-color:#ced4da}
+#main-nav .nav-link:hover,#main-nav .nav-link.active{background:#dff5ff}
+#carouselTrending img{min-height:340px;max-height:340px}
+#carouselTrending .carousel-caption{background:rgb(0 0 0 / 50%)}
+.post-card{}
+.post-card:hover,.post-card:focus{background:#dff5ff}
+.post-card .post-image img{width:140px;padding:4px}
+.post-card .post-title{font-size:20px}
+.post-card .post-date,.post-card .post-label{font-size:0.75em}
+@media (max-width:768px){.post-card .post-image img{width:120px}.post-card .post-title{font-size:18px}}
+@media (max-width:576px){.post-card .post-image img{width:100px}.post-card .post-title{font-size:16px}}
+
+/* post detail */
+.post-detail h1{font-size:2rem}
+.post-detail h2{font-size:1.8rem}
+.post-detail h3{font-size:1.6rem}
+.post-detail h4{font-size:1.4rem}
+.post-detail h5{font-size:1.2rem}
+.post-detail h6{font-size:1rem}
+.post-detail .post-content{font-size:18px}
+.post-detail .post-content .separator{margin:0 -25px 15px -25px}
+.post-detail .post-content img,.post-detail .post-content iframe{max-width:100%}
+.post-detail #authorPost img{width:60px}
+@media (max-width:768px){.post-detail .post-content{font-size:16px}}
+@media (max-width:576px){.post-detail .post-content{font-size:15px}}
+
+/* dark mode */
+body.dark-mode{background:#15202b;color:#fff}
+body.dark-mode #main{background:#1c2834}
+body.dark-mode #main-header,body.dark-mode #main-nav{border-color:#444!important}
+body.dark-mode #navbarMobile .btn,body.dark-mode #navBarIconMobile .btn{color:#fff}
+body.dark-mode #main-categories .card-header,body.dark-mode #main-archive .card-header,body.dark-mode #main-sidebar .card-header{background:#222}
+body.dark-mode #main-categories a,body.dark-mode #main-archive a{color:#fff}
+body.dark-mode .post-card:hover,body.dark-mode .post-card:focus{background:#000;color:#fff}
+body.dark-mode .list-group{--bs-list-group-color:#fff;--bs-list-group-bg:#222}
+body.dark-mode .commentBody p{color:#222}
+body.dark-mode #main-nav .nav-link:hover,body.dark-mode #main-nav .nav-link.active{background:#000;color:#fff}
+body.dark-mode .alert-light{--bs-alert-color:#fff;--bs-alert-bg:#212529;--bs-alert-border-color:#212529}
+
+/* ads */
+.ads-square{width:300px;height:250px;background:#428bca;color:#fff;line-height:250px;text-align:center;margin:auto}
+.ads-horizontal{width:100%;height:90px;background:#428bca;color:#fff;line-height:90px;text-align:center}
