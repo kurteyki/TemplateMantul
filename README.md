@@ -18,7 +18,10 @@ Blogger Template Mobile Layout, Mantul
 ## Author
 Made By Irfan
 [Facebook](https://facebook.com/irfan.ycd)
+
 [Instagram](https://instagram.com/irfan.ycd)
+
 [Twitter](https://twitter.com/irfan.ycd)
 
-[Donate](https://tools.kurteyki.com/irfan.ycd)
+If you like this template give me donate yeah :) 
+[Donate](https://tools.kurteyki.com/)
