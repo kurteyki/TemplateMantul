@@ -1,0 +1,2 @@
+- add navbar icon pages (category, archive, pages, dots)
+- add to top button

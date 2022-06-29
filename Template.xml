@@ -70,7 +70,7 @@
 		<meta content='adult' name='rating'/>
 	</b:if>
 
-	<b:comment>disable caching turbo wire (render duplicate event :)</b:comment>
+	<b:comment>disable cache turbo hotwire (fix render duplicate event)</b:comment>
 	<meta name="turbo-cache-control" content="no-cache"/>
 
 	<b:comment>CSS External</b:comment>
@@ -112,129 +112,18 @@
 
 	<b:comment>CSS Internal</b:comment>
 	<style type="text/css">
+		.post-card .post-image img {
+		max-width:140px;
+		padding: 0;
+		}
+		.post-detail .post-content .separator {
+		margin:0;
+		}
+		#carouselTrending img {
+		min-height:initial;
+		max-height:initial;
+		}
 	</style>
-
-	<b:comment>Define Default Code Here</b:comment>
-	<b:defaultmarkups>
-		<b:defaultmarkup type='Common'>
-			<b:includable id='cssx'>
-				<b:comment>insert css external here</b:comment>
-				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css" integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@093dbcf6cc9457db271ddd8e8b5f1750c10e7b8d/app.css" />
-
-			</b:includable>
-			<b:includable id='jsx'>
-				<b:comment>insert js external here</b:comment>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.bundle.min.js" integrity="sha512-ndrrR94PW3ckaAvvWrAzRi5JWjF71/Pw7TlSo6judANOFCmz0d+0YE+qIGamRRSnVzSvIyGs4BTtyFMm3MT/cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-				<script type="module">
-					import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
-				</script>
-
-				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@093dbcf6cc9457db271ddd8e8b5f1750c10e7b8d/app.js"></script>
-			</b:includable>						
-		</b:defaultmarkup>	
-		<b:defaultmarkup type='FeaturedPost,PopularPosts'>
-			<b:includable id='blogThisShare'/>
-			<b:includable id='bylineByName'/>
-			<b:includable id='bylineRegion'/>
-			<b:includable id='commentsLink'/>
-			<b:includable id='commentsLinkIframe'/>
-			<b:includable id='emailPostIcon'/>
-			<b:includable id='facebookShare'/>
-			<b:includable id='footerBylines'/>
-			<b:includable id='googlePlusShare'/>
-			<b:includable id='headerByline'/>
-			<b:includable id='linkShare'/>
-			<b:includable id='otherSharingButton'/>
-			<b:includable id='platformShare'/>
-			<b:includable id='postAuthor'/>
-			<b:includable id='postCommentsLink'/>
-			<b:includable id='postJumpLink'/>
-			<b:includable id='postLabels'/>
-			<b:includable id='postLocation'/>
-			<b:includable id='postReactions'/>
-			<b:includable id='postShareButtons'/>
-			<b:includable id='postTimestamp'/>
-			<b:includable id='sharingButton'/>
-			<b:includable id='sharingButtonContent'/>
-			<b:includable id='sharingButtons'/>
-			<b:includable id='sharingButtonsMenu'/>
-			<b:includable id='sharingPlatformIcon'/>
-			<b:includable id='snippetedPostByline'/>
-			<b:includable id='snippetedPostContent'/>
-			<b:includable id='snippetedPostThumbnail'/>
-			<b:includable id='snippetedPostTitle'/>
-			<b:includable id='snippetedPosts'/>
-		</b:defaultmarkup>
-		<b:defaultmarkup type='Blog'>
-			<b:includable id='post'/>
-			<b:includable id='aboutPostAuthor'/>
-			<b:includable id='addComments'/>
-			<b:includable id='blogThisShare'/>
-			<b:includable id='bylineByName'/>
-			<b:includable id='bylineRegion'/>
-			<b:includable id='commentAuthorAvatar'/>
-			<b:includable id='commentDeleteIcon'/>
-			<b:includable id='commentForm'/>
-			<b:includable id='commentFormIframeSrc'/>
-			<b:includable id='commentItem'/>
-			<b:includable id='commentList'/>
-			<b:includable id='commentPicker'/>
-			<b:includable id='comments'/>
-			<b:includable id='commentsLink'/>
-			<b:includable id='commentsLinkIframe'/>
-			<b:includable id='commentsTitle'/>
-			<b:includable id='defaultAdUnit'/>
-			<b:includable id='emailPostIcon'/>
-			<b:includable id='facebookShare'/>
-			<b:includable id='feedLinks'/>
-			<b:includable id='feedLinksBody'/>
-			<b:includable id='footerBylines'/>
-			<b:includable id='googlePlusShare'/>
-			<b:includable id='headerByline'/>
-			<b:includable id='homePageLink'/>
-			<b:includable id='iframeComments'/>
-			<b:includable id='inlineAd'/>
-			<b:includable id='linkShare'/>
-			<b:includable id='nextPageLink'/>
-			<b:includable id='otherSharingButton'/>
-			<b:includable id='platformShare'/>
-			<b:includable id='postAuthor'/>
-			<b:includable id='postBody'/>
-			<b:includable id='postBodySnippet'/>
-			<b:includable id='postCommentsAndAd'/>
-			<b:includable id='postCommentsLink'/>
-			<b:includable id='postFooter'/>
-			<b:includable id='postFooterAuthorProfile'/>
-			<b:includable id='postHeader'/>
-			<b:includable id='postJumpLink'/>
-			<b:includable id='postLabels'/>
-			<b:includable id='postLocation'/>
-			<b:includable id='postMeta'/>
-			<b:includable id='postMetadataJSONImage'/>
-			<b:includable id='postMetadataJSONPublisher'/>
-			<b:includable id='postPagination'/>
-			<b:includable id='postReactions'/>
-			<b:includable id='postShareButtons'/>
-			<b:includable id='postTimestamp'/>
-			<b:includable id='postTitle'/>
-			<b:includable id='previousPageLink'/>
-			<b:includable id='sharingButton'/>
-			<b:includable id='sharingButtonContent'/>
-			<b:includable id='sharingButtons'/>
-			<b:includable id='sharingButtonsMenu'/>
-			<b:includable id='sharingPlatformIcon'/>
-			<b:includable id='threadedCommentForm'/>
-			<b:includable id='threadedCommentJs'/>
-			<b:includable id='threadedComments'/>
-		</b:defaultmarkup>		
-	</b:defaultmarkups>	
 
 	<b:comment>JS External</b:comment>
 	<b:include name='jsx'/>
@@ -268,18 +157,16 @@
 								<b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
 							</b:widget-settings>
 							<b:includable id='main' var='this'>
-								<b:loop values='data:posts' var='post' index="x">
-									<b:if cond='data:blog.url != data:post.url'>
-										<div class="list-group w-auto">
-											<a expr:href="data:post.url" class="post-card list-group-item list-group-item-action d-flex flex-column flex-md-row justify-content-center align-items-center text-center text-md-start gap-md-3 py-1 rounded-0">
-												<span class="text-danger fw-bold d-flex">
-													<i class="bi bi-pin-angle me-1"></i> <data:title/>
-												</span>
-												<span class="d-none d-md-block">|</span>
-												<span class="my-auto"><data:post.title/></span>
-											</a>           
-										</div>
-									</b:if>
+								<b:loop values='data:posts filter (p =&gt; p.id != data:view.postId)' var='post'>
+									<div class="list-group w-auto">
+										<a expr:href="data:post.url" class="post-card list-group-item list-group-item-action d-flex flex-column flex-md-row justify-content-center align-items-center text-center text-md-start gap-md-3 py-1 rounded-0">
+											<span class="text-danger fw-bold d-flex">
+												<i class="bi bi-pin-angle me-1"></i> <data:title/>
+											</span>
+											<span class="d-none d-md-block">|</span>
+											<span class="my-auto"><data:post.title/></span>
+										</a>           
+									</div>
 								</b:loop>
 							</b:includable>
 						</b:widget>
@@ -294,7 +181,7 @@
 								<b:widget-setting name='sectionWidth'>933</b:widget-setting>
 								<b:widget-setting name='useImage'>true</b:widget-setting>
 								<b:widget-setting name='shrinkToFit'>false</b:widget-setting>
-								<b:widget-setting name='imagePlacement'>BEFORE_DESCRIPTION</b:widget-setting>
+								<b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
 								<b:widget-setting name='displayWidth'>60</b:widget-setting>
 							</b:widget-settings>
 							<b:includable id='main' var='this'>
@@ -343,10 +230,6 @@
 									</div>
 								</nav>
 							</b:includable>
-							<b:includable id='behindImageStyle'/>
-							<b:includable id='description'/>
-							<b:includable id='image'/>
-							<b:includable id='title'/>
 						</b:widget>
 					</b:section>	
 
@@ -378,7 +261,7 @@
 												<div class="carousel-item" data-bs-interval="5000">
 													<b:class cond='data:x == 0' name='active'/>
 													<a expr:href='data:post.url'>
-														<img loading="lazy" expr:src='data:post.featuredImage ? data:post.featuredImage : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPXk2ZddRceCKCDDinODgLudn_NBeYZhp9vcTtROpXBEowyFguULTh__DLiheEmtdKg_vn80qRHIPUTCyyUAZHaXBGzWedomeMJViKX05NIdRKu0o6eF_xeHN--ub4n5mh8r-PAiHnTeDWYwA8pHQc-e4U6H6NZqbp5HLerels-9IiDIoJMr4PQJC1-Q/w150/noimage-blogger.jpg"' class="d-block w-100" expr:alt="data:post.title"/>
+														<img loading="lazy" expr:src='data:post.featuredImage ? data:post.featuredImage : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPXk2ZddRceCKCDDinODgLudn_NBeYZhp9vcTtROpXBEowyFguULTh__DLiheEmtdKg_vn80qRHIPUTCyyUAZHaXBGzWedomeMJViKX05NIdRKu0o6eF_xeHN--ub4n5mh8r-PAiHnTeDWYwA8pHQc-e4U6H6NZqbp5HLerels-9IiDIoJMr4PQJC1-Q/w300/noimage-blogger.jpg"' class="d-block w-100" expr:alt="data:post.title"/>
 														<div class="carousel-caption">
 															<strong><data:post.title/></strong>
 														</div>
@@ -397,7 +280,7 @@
 									</div>								
 								</b:includable>   
 							</b:widget>
-							<b:widget cond='not data:view.search.query and not data:view.isPreview' id='HTML601' locked='true' title='Ads Top' type='HTML' version='2' visible='true'>
+							<b:widget cond='not data:view.search.query and not data:view.isPreview and not data:view.isError' id='HTML601' locked='true' title='Ads Top' type='HTML' version='2' visible='true'>
 								<b:widget-settings>
 									<b:widget-setting name='content'><![CDATA[<div class="text-center">
 										<a class="btn btn-primary" href="https://github.com/kurteyki/TemplateMantul/archive/refs/heads/main.zip" target="_blank" rel="nofollow">
@@ -439,14 +322,14 @@
 								</b:widget-settings>
 								<b:includable id="main" var="this">
 
-									<b:include name='messagePost'/>
+									<b:include name='postMessage'/>
 
 									<b:tag id="postIndex" cond="data:view.isMultipleItems" class='post-index list-group w-auto' name="div">
 										<b:loop index='x' values="data:posts" var="post">
 											<b:if cond='data:view.isMultipleItems'>
 												<b:include name="postIndex"/>
 
-												<b:if cond='not data:posts.empty AND data:x + 1 == data:posts.size and !data:view.search.query'>
+												<b:if cond='not data:posts.empty AND not data:view.search.query AND data:x + 1 == data:posts.size'>
 													<div class='ads-target-feed'/>  
 												</b:if>
 											</b:if>
@@ -456,13 +339,13 @@
 										</b:loop>	
 									</b:tag>								
 
-									<b:include cond='data:view.isMultipleItems' name="postIndexPagination"/>
+									<b:include cond='data:view.isMultipleItems' name="postPaginationMultiple"/>
 
 								</b:includable>
 								<b:includable id="postIndex">
 									<a expr:href="data:post.url" class="post-card list-group-item list-group-item-action d-flex align-items-center gap-3 py-1 rounded-0">
 										<div class="post-image">
-											<img loading="lazy" expr:src='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl, 150) : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPXk2ZddRceCKCDDinODgLudn_NBeYZhp9vcTtROpXBEowyFguULTh__DLiheEmtdKg_vn80qRHIPUTCyyUAZHaXBGzWedomeMJViKX05NIdRKu0o6eF_xeHN--ub4n5mh8r-PAiHnTeDWYwA8pHQc-e4U6H6NZqbp5HLerels-9IiDIoJMr4PQJC1-Q/w150/noimage-blogger.jpg"' expr:alt="data:post.title"/>
+											<img loading="lazy" expr:src='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl, 300) : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPXk2ZddRceCKCDDinODgLudn_NBeYZhp9vcTtROpXBEowyFguULTh__DLiheEmtdKg_vn80qRHIPUTCyyUAZHaXBGzWedomeMJViKX05NIdRKu0o6eF_xeHN--ub4n5mh8r-PAiHnTeDWYwA8pHQc-e4U6H6NZqbp5HLerels-9IiDIoJMr4PQJC1-Q/w300/noimage-blogger.jpg"' expr:alt="data:post.title"/>
 										</div>
 										<div class="d-flex flex-column py-2">
 											<b:if cond='data:this.allBylineItems.labels AND !data:view.search.label'>
@@ -503,11 +386,11 @@
 										<b:include cond='data:this.allBylineItems.labels OR data:post.location' name='infoPost'/>
 										<div class='ads-target-post-bottom'/>
 										<b:include cond='data:post.author.aboutMe' name='authorPost'/>
-										<b:include name='relatedPost'/>
+										<b:include cond='data:this.allBylineItems.labels.label AND data:post.labels' name='relatedPost'/>
 										<b:include cond='data:this.allBylineItems.comments AND data:post.allowComments' name='commentPost'/>
 									</b:if>
 								</b:includable>
-								<b:includable id="postIndexPagination">
+								<b:includable id="postPaginationMultiple">
 									<b:if cond='data:olderPageUrl'>
 										<div class='text-center py-3' id='postIndexPagination'>
 											<a class="btn btn-primary btn-sm pagination-link" data-turbo="false" expr:data-loading='data:messages.loading' expr:href='data:olderPageUrl'>
@@ -516,7 +399,7 @@
 										</div>
 									</b:if> 	
 								</b:includable>
-								<b:includable id="messagePost">
+								<b:includable id="postMessage">
 									<b:if cond='data:view.isHomepage and data:posts.empty'>
 										<div class='alert alert-light border m-1'>
 											<i class="bi bi-info-circle flex-shrink-0 me-2"></i>
@@ -642,9 +525,7 @@
 									</div>
 								</b:includable>
 								<b:includable id="relatedPost">
-									<b:if cond='data:post.labels'>
-										&lt;div id=&#039;relatedPost&#039; data-limit=&#039;5&#039; data-id=&#039;<data:post.id/>&#039; data-title=&#039;<data:this.allBylineItems.labels.label/>&#039; data-labels=&#039;<b:loop index='i' values='data:post.labels limit 5' var='label'><data:label.name/><b:if cond='data:post.labels.size != data:i + 1'>,</b:if></b:loop>&#039;&gt;&lt;/div&gt;
-									</b:if>
+									&lt;div id=&#039;relatedPost&#039; data-limit=&#039;5&#039; data-id=&#039;<data:post.id/>&#039; data-title=&#039;<data:this.allBylineItems.labels.label/>&#039; data-labels=&#039;<b:loop index='i' values='data:post.labels limit 5' var='label'><data:label.name/><b:if cond='data:post.labels.size != data:i + 1'>,</b:if></b:loop>&#039;&gt;&lt;/div&gt;
 								</b:includable>
 								<b:includable id="commentPost">
 
@@ -669,10 +550,17 @@
 										<b:comment>
 											this Comment Location setting (Embed, Full, Or Popup)
 										</b:comment>
-										<b:if cond='data:post.allowNewComments'>
-											<b:if cond='data:post.embedCommentForm'>
-												<b:comment>commentPostEmbed</b:comment>
 
+
+										<b:if cond='data:post.embedCommentForm'>
+
+											<b:if cond='data:post.noNewCommentsText'>
+												<b:comment>new comment has disable from post setting (only work embed comment)</b:comment>
+												<div class='alert alert-warning my-3'>
+													<data:post.noNewCommentsText/>
+												</div>
+												<b:else/>	
+												<b:comment>commentPostEmbed</b:comment>
 												<a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
 
 												<div id="commentFormWrapper">
@@ -684,30 +572,26 @@
 															</div>
 														</b:if>
 
+														<b:comment>don't remove class name or the comment can't work</b:comment>
 														<iframe loading="lazy" allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:data-src='data:post.commentFormIframeSrc' scrolling='no' frameborder='0' id='comment-editor' name='comment-editor' width='100%'/>
 													</div>
 												</div>
-
-												<b:elseif cond='data:post.commentsUrl'/>
-
-												<b:if cond='data:post.commentsUrlOnclick'>
-													<b:comment>commentPostPopup</b:comment>
-													<a expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
-														<b:message name='messages.postAComment'/>
-													</a>
-													<b:else/>
-													<b:comment>commentPostFullPage</b:comment>
-													<a expr:href='data:post.commentsUrl'>
-														<b:message name='messages.postAComment'/>
-													</a>
-												</b:if>
-
 											</b:if>
-											<b:else/>
-											<b:comment>new comment has disable from post setting</b:comment>
-											<div class='alert alert-warning my-3'>
-												<data:post.noNewCommentsText/>
-											</div>
+
+											<b:elseif cond='data:post.commentsUrl'/>
+
+											<b:if cond='data:post.commentsUrlOnclick'>
+												<b:comment>commentPostPopup</b:comment>
+												<a expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+													<b:message name='messages.postAComment'/>
+												</a>
+												<b:else/>
+												<b:comment>commentPostFullPage</b:comment>
+												<a expr:href='data:post.commentsUrl'>
+													<b:message name='messages.postAComment'/>
+												</a>
+											</b:if>
+
 										</b:if>
 
 										<b:comment>this Comment Data</b:comment>
@@ -716,7 +600,7 @@
 												<b:loop values='data:post.comments where (comment => not comment.inReplyTo or comment.inReplyTo == 0)' var='comment' reverse="true">
 													<li class="list-group-item d-flex gap-3 mb-2 border" expr:id='data:comment.anchorName'>
 														<div class="CommentLeft">
-															<img class="rounded-circle" expr:src="data:comment.authorAvatarSrc" expr:alt="data:comment.author" width="35" height="35" />
+															<img class="rounded-circle" expr:src='data:comment.authorAvatarSrc ? resizeImage(data:comment.authorAvatarSrc, 35) : "https://www.blogger.com/img/blogger_logo_round_35.png"' expr:alt="data:comment.author" width="35" height="35" />
 														</div>
 														<div class="commentRight w-100">
 															<div class="commentHeader d-flex justify-content-between align-items-center">
@@ -739,7 +623,7 @@
 																			<b:loop values='data:commentReply' var='commentReply'>
 																				<li class="list-group-item d-flex gap-3 mb-2 border" expr:id='data:commentReply.anchorName'>
 																					<div class="CommentLeft">
-																						<img class="rounded-circle" expr:src="data:commentReply.authorAvatarSrc" expr:alt="data:commentReply.author" width="35" height="35" />
+																						<img class="rounded-circle" expr:src='data:commentReply.authorAvatarSrc ? resizeImage(data:commentReply.authorAvatarSrc, 35) : "https://www.blogger.com/img/blogger_logo_round_35.png"' expr:alt="data:commentReply.author" width="35" height="35" />
 																					</div>
 																					<div class="commentRight w-100">
 																						<div class="commentHeader d-flex justify-content-between align-items-center">
@@ -882,9 +766,6 @@
 										</div>
 									</div>										
 								</b:includable>
-								<b:includable id='cloud'/>
-								<b:includable id='content'/>
-								<b:includable id='list'/>
 							</b:widget>
 						</b:section>						
 					</div>
@@ -935,11 +816,6 @@
 										</div>
 									</div>	
 								</b:includable>
-								<b:includable id='content'/>
-								<b:includable id='flat'/>
-								<b:includable id='hierarchy'/>
-								<b:includable id='interval'/>
-								<b:includable id='posts'/>
 							</b:widget>
 						</b:section>						
 					</div>
@@ -992,21 +868,6 @@
 										</div>												
 									</b:if>
 								</b:includable>
-								<b:includable id='authorProfileImage'/>										
-								<b:includable id='content'/>
-								<b:includable id='defaultProfileImage'/>
-								<b:includable id='profileImage'/>
-								<b:includable id='teamProfile'/>
-								<b:includable id='teamProfileLink'/>
-								<b:includable id='userGoogleProfile'/>
-								<b:includable id='userLocation'/>
-								<b:includable id='userProfile'/>
-								<b:includable id='userProfileData'/>
-								<b:includable id='userProfileImage'/>
-								<b:includable id='userProfileInfo'/>											
-								<b:includable id='userProfileLink'/>
-								<b:includable id='userProfileText'/>
-								<b:includable id='viewProfileLink'/>
 							</b:widget>							
 							<b:widget id='LinkList1' locked='true' title='Social' type='LinkList' visible='true'>
 								<b:widget-settings>
@@ -1037,8 +898,7 @@
 											<i class="bi bi-bell"></i> <data:messages.subscribe/>
 										</a>
 									</div>
-								</b:includable>
-								<b:includable id='content'/>
+								</b:includable>								
 							</b:widget>
 						</b:section>									
 					</div>
@@ -1089,12 +949,167 @@
 		</div>	
 	</main>
 
+	<b:comment>place defaultmarkups on bottom for clean code</b:comment>
 	<b:defaultmarkups>
 		<b:defaultmarkup type='Common'>
+			<b:includable id='cssx'>
+				<b:comment>insert css external here</b:comment>
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css" integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@093dbcf6cc9457db271ddd8e8b5f1750c10e7b8d/app.css" />
+
+			</b:includable>
+			<b:includable id='jsx'>
+				<b:comment>insert js external here</b:comment>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.bundle.min.js" integrity="sha512-ndrrR94PW3ckaAvvWrAzRi5JWjF71/Pw7TlSo6judANOFCmz0d+0YE+qIGamRRSnVzSvIyGs4BTtyFMm3MT/cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+				<script type="module">
+					import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+				</script>
+
+				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@093dbcf6cc9457db271ddd8e8b5f1750c10e7b8d/app.js"></script>
+			</b:includable>						
 			<b:includable id='body'>
 				&lt;!--<body/>--&gt;
 			</b:includable>
 		</b:defaultmarkup>
+		<b:defaultmarkup type='FeaturedPost,PopularPosts'>
+			<b:includable id='blogThisShare'/>
+			<b:includable id='bylineByName'/>
+			<b:includable id='bylineRegion'/>
+			<b:includable id='commentsLink'/>
+			<b:includable id='commentsLinkIframe'/>
+			<b:includable id='emailPostIcon'/>
+			<b:includable id='facebookShare'/>
+			<b:includable id='footerBylines'/>
+			<b:includable id='googlePlusShare'/>
+			<b:includable id='headerByline'/>
+			<b:includable id='linkShare'/>
+			<b:includable id='otherSharingButton'/>
+			<b:includable id='platformShare'/>
+			<b:includable id='postAuthor'/>
+			<b:includable id='postCommentsLink'/>
+			<b:includable id='postJumpLink'/>
+			<b:includable id='postLabels'/>
+			<b:includable id='postLocation'/>
+			<b:includable id='postReactions'/>
+			<b:includable id='postShareButtons'/>
+			<b:includable id='postTimestamp'/>
+			<b:includable id='sharingButton'/>
+			<b:includable id='sharingButtonContent'/>
+			<b:includable id='sharingButtons'/>
+			<b:includable id='sharingButtonsMenu'/>
+			<b:includable id='sharingPlatformIcon'/>
+			<b:includable id='snippetedPostByline'/>
+			<b:includable id='snippetedPostContent'/>
+			<b:includable id='snippetedPostThumbnail'/>
+			<b:includable id='snippetedPostTitle'/>
+			<b:includable id='snippetedPosts'/>
+		</b:defaultmarkup>
+		<b:defaultmarkup type='Blog'>
+			<b:includable id='post'/>
+			<b:includable id='aboutPostAuthor'/>
+			<b:includable id='addComments'/>
+			<b:includable id='blogThisShare'/>
+			<b:includable id='bylineByName'/>
+			<b:includable id='bylineRegion'/>
+			<b:includable id='commentAuthorAvatar'/>
+			<b:includable id='commentDeleteIcon'/>
+			<b:includable id='commentForm'/>
+			<b:includable id='commentFormIframeSrc'/>
+			<b:includable id='commentItem'/>
+			<b:includable id='commentList'/>
+			<b:includable id='commentPicker'/>
+			<b:includable id='comments'/>
+			<b:includable id='commentsLink'/>
+			<b:includable id='commentsLinkIframe'/>
+			<b:includable id='commentsTitle'/>
+			<b:includable id='defaultAdUnit'/>
+			<b:includable id='emailPostIcon'/>
+			<b:includable id='facebookShare'/>
+			<b:includable id='feedLinks'/>
+			<b:includable id='feedLinksBody'/>
+			<b:includable id='footerBylines'/>
+			<b:includable id='googlePlusShare'/>
+			<b:includable id='headerByline'/>
+			<b:includable id='homePageLink'/>
+			<b:includable id='iframeComments'/>
+			<b:includable id='inlineAd'/>
+			<b:includable id='linkShare'/>
+			<b:includable id='nextPageLink'/>
+			<b:includable id='otherSharingButton'/>
+			<b:includable id='platformShare'/>
+			<b:includable id='postAuthor'/>
+			<b:includable id='postBody'/>
+			<b:includable id='postBodySnippet'/>
+			<b:includable id='postCommentsAndAd'/>
+			<b:includable id='postCommentsLink'/>
+			<b:includable id='postFooter'/>
+			<b:includable id='postFooterAuthorProfile'/>
+			<b:includable id='postHeader'/>
+			<b:includable id='postJumpLink'/>
+			<b:includable id='postLabels'/>
+			<b:includable id='postLocation'/>
+			<b:includable id='postMeta'/>
+			<b:includable id='postMetadataJSONImage'/>
+			<b:includable id='postMetadataJSONPublisher'/>
+			<b:includable id='postPagination'/>
+			<b:includable id='postReactions'/>
+			<b:includable id='postShareButtons'/>
+			<b:includable id='postTimestamp'/>
+			<b:includable id='postTitle'/>
+			<b:includable id='previousPageLink'/>
+			<b:includable id='sharingButton'/>
+			<b:includable id='sharingButtonContent'/>
+			<b:includable id='sharingButtons'/>
+			<b:includable id='sharingButtonsMenu'/>
+			<b:includable id='sharingPlatformIcon'/>
+			<b:includable id='threadedCommentForm'/>
+			<b:includable id='threadedCommentJs'/>
+			<b:includable id='threadedComments'/>
+		</b:defaultmarkup>	
+		<b:defaultmarkup type='BlogArchive'>
+			<b:includable id='content'/>
+			<b:includable id='flat'/>
+			<b:includable id='hierarchy'/>
+			<b:includable id='interval'/>
+			<b:includable id='posts'/>
+		</b:defaultmarkup>
+		<b:defaultmarkup type='Label'>
+			<b:includable id='cloud'/>
+			<b:includable id='content'/>
+			<b:includable id='list'/>	
+		</b:defaultmarkup>
+		<b:defaultmarkup type='Header'>
+			<b:includable id='behindImageStyle'/>
+			<b:includable id='description'/>
+			<b:includable id='image'/>
+			<b:includable id='title'/>	
+		</b:defaultmarkup>
+		<b:defaultmarkup type='Profile'>
+			<b:includable id='authorProfileImage'/>										
+			<b:includable id='content'/>
+			<b:includable id='defaultProfileImage'/>
+			<b:includable id='profileImage'/>
+			<b:includable id='teamProfile'/>
+			<b:includable id='teamProfileLink'/>
+			<b:includable id='userGoogleProfile'/>
+			<b:includable id='userLocation'/>
+			<b:includable id='userProfile'/>
+			<b:includable id='userProfileData'/>
+			<b:includable id='userProfileImage'/>
+			<b:includable id='userProfileInfo'/>											
+			<b:includable id='userProfileLink'/>
+			<b:includable id='userProfileText'/>
+			<b:includable id='viewProfileLink'/>
+		</b:defaultmarkup>
+		<b:defaultmarkup type='LinkList'>
+			<b:includable id='content'/>
+		</b:defaultmarkup>	
 	</b:defaultmarkups>
 
 &lt;/body&gt; <!-- // break
