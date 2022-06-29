@@ -15,7 +15,7 @@ button.close:focus{outline:none;box-shadow:none}
 #carouselTrending .carousel-caption{background:rgb(0 0 0 / 50%)}
 .post-card{}
 .post-card:hover,.post-card:focus{background:#dff5ff}
-.post-card .post-image img{width:140px;padding:4px}
+.post-card .post-image img{width:140px;}
 .post-card .post-title{font-size:20px}
 .post-card .post-date,.post-card .post-label{font-size:0.75em}
 @media (max-width:768px){.post-card .post-image img{width:120px}.post-card .post-title{font-size:18px}}
@@ -29,7 +29,6 @@ button.close:focus{outline:none;box-shadow:none}
 .post-detail h5{font-size:1.2rem}
 .post-detail h6{font-size:1rem}
 .post-detail .post-content{font-size:18px}
-.post-detail .post-content .separator{margin:0 -25px 15px -25px}
 .post-detail .post-content img,.post-detail .post-content iframe{max-width:100%}
 .post-detail #authorPost img{width:60px}
 @media (max-width:768px){.post-detail .post-content{font-size:16px}}

@@ -27,3 +27,4 @@ If you like this template give me [Donate](https://tools.kurteyki.com/) :)
 29 Juni 2022
 * Merge Turbo hotwire to app.js
 * Fix CSS
+* Add to Top button
