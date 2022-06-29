@@ -33,7 +33,7 @@ For more information, see: https://turbo.hotwired.dev/handbook/building#working-
 
 ——
 Suppress this warning by adding a "data-turbo-suppress-warning" attribute to: %s
-`,s.outerHTML)})(),window.Turbo=ut,U();export{x as PageRenderer,p as PageSnapshot,oe as clearCache,ie as connectStreamSource,re as disconnectStreamSource,ee as navigator,te as registerAdapter,ne as renderStreamMessage,o as session,le as setConfirmMethod,ae as setProgressBarDelay,U as start,se as visit};export default null;
+`,s.outerHTML)})(),window.Turbo=ut,U();export{x as PageRenderer,p as PageSnapshot,oe as clearCache,ie as connectStreamSource,re as disconnectStreamSource,ee as navigator,te as registerAdapter,ne as renderStreamMessage,o as session,le as setConfirmMethod,ae as setProgressBarDelay,U as start,se as visit};
 
 /**
  * 

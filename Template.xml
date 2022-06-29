@@ -965,13 +965,7 @@
 				<b:comment>insert js external here</b:comment>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.bundle.min.js" integrity="sha512-ndrrR94PW3ckaAvvWrAzRi5JWjF71/Pw7TlSo6judANOFCmz0d+0YE+qIGamRRSnVzSvIyGs4BTtyFMm3MT/cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-				<script type="module">
-					import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
-				</script>
-
-				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@093dbcf6cc9457db271ddd8e8b5f1750c10e7b8d/app.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@27e42da17f53b5da16eeb92ab3f99a84098f1138/app.js"></script>
 			</b:includable>						
 			<b:includable id='body'>
 				&lt;!--<body/>--&gt;
