@@ -952,14 +952,14 @@
 
 						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-						<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@b67e8e86fe5a98f7bc0b9ad8f9dcc73a04d79133/app.css" />
+						<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@a0a847f1e789c08570b51e84c8823aae523585aa/app.css" />
 
 					</b:includable>
 					<b:includable id='jsx'>
 						<b:comment>insert js external here</b:comment>
 						<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.bundle.min.js" integrity="sha512-ndrrR94PW3ckaAvvWrAzRi5JWjF71/Pw7TlSo6judANOFCmz0d+0YE+qIGamRRSnVzSvIyGs4BTtyFMm3MT/cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-						<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@b67e8e86fe5a98f7bc0b9ad8f9dcc73a04d79133/app.js"></script>
+						<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@a0a847f1e789c08570b51e84c8823aae523585aa/app.js"></script>
 					</b:includable>						
 					<b:includable id='body'>
 						&lt;!--<body/>--&gt;
