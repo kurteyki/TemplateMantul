@@ -22,3 +22,10 @@ Made By Irfan
 - [Twitter](https://twitter.com/irfan.ycd)
 
 If you like this template give me [Donate](https://tools.kurteyki.com/) :)
+
+## Change Log
+29 Juni 2022
+- Merge Turbo hotwire to app.js
+- Fix CSS
+- Add to Top button
+- Fix date and share button setting
