@@ -29,3 +29,6 @@ If you like this template give me [Donate](https://tools.kurteyki.com/) :)
 - Fix CSS
 - Add to Top button
 - Fix date and share button setting
+- Fix author url when disable
+- remove post info on page type
+- change no-image URL

@@ -250,7 +250,7 @@
 												<div class="carousel-item" data-bs-interval="5000">
 													<b:class cond='data:x == 0' name='active'/>
 													<a expr:href='data:post.url'>
-														<img loading="lazy" expr:src='data:post.featuredImage ? data:post.featuredImage : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPXk2ZddRceCKCDDinODgLudn_NBeYZhp9vcTtROpXBEowyFguULTh__DLiheEmtdKg_vn80qRHIPUTCyyUAZHaXBGzWedomeMJViKX05NIdRKu0o6eF_xeHN--ub4n5mh8r-PAiHnTeDWYwA8pHQc-e4U6H6NZqbp5HLerels-9IiDIoJMr4PQJC1-Q/w300/noimage-blogger.jpg"' class="d-block w-100" expr:alt="data:post.title"/>
+														<img loading="lazy" expr:src='data:post.featuredImage ? data:post.featuredImage : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3Ia32aeortEtnG6libJiXjj6It8o5ikSjQEaPSvLK09ORfnWovo0FQX25VeAB-cSySlozaol3LZ-9C7BVpfeMMcxtEE7SxW-BCLVX4wwywof7kiBCp8nsHbre7ScleqehuZzY0G17M1mBV1H-KzYd1QW098SZzEAHE0GecLG5u2ULhnEYtKTsWUMp/w300/no-image.jpg"' class="d-block w-100" expr:alt="data:post.title"/>
 														<div class="carousel-caption">
 															<strong><data:post.title/></strong>
 														</div>
@@ -334,7 +334,7 @@
 								<b:includable id="postIndex">
 									<a expr:href="data:post.url" class="post-card list-group-item list-group-item-action d-flex align-items-center gap-3 py-1 rounded-0">
 										<div class="post-image">
-											<img loading="lazy" expr:src='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl, 300) : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPXk2ZddRceCKCDDinODgLudn_NBeYZhp9vcTtROpXBEowyFguULTh__DLiheEmtdKg_vn80qRHIPUTCyyUAZHaXBGzWedomeMJViKX05NIdRKu0o6eF_xeHN--ub4n5mh8r-PAiHnTeDWYwA8pHQc-e4U6H6NZqbp5HLerels-9IiDIoJMr4PQJC1-Q/w300/noimage-blogger.jpg"' expr:alt="data:post.title"/>
+											<img loading="lazy" expr:src='data:post.thumbnailUrl ? resizeImage(data:post.thumbnailUrl, 300) : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3Ia32aeortEtnG6libJiXjj6It8o5ikSjQEaPSvLK09ORfnWovo0FQX25VeAB-cSySlozaol3LZ-9C7BVpfeMMcxtEE7SxW-BCLVX4wwywof7kiBCp8nsHbre7ScleqehuZzY0G17M1mBV1H-KzYd1QW098SZzEAHE0GecLG5u2ULhnEYtKTsWUMp/w300/no-image.jpg"' expr:alt="data:post.title"/>
 										</div>
 										<div class="d-flex flex-column py-2">
 											<b:if cond='data:this.allBylineItems.labels AND !data:view.search.label'>
@@ -358,7 +358,7 @@
 										<h1 class="post-title">
 											<data:post.title/>
 										</h1>
-										<b:if cond='data:this.allBylineItems.timestamp OR data:this.allBylineItems.share'>
+										<b:if cond='data:this.allBylineItems.timestamp OR data:this.allBylineItems.share AND data:view.isPost'>
 											<div class="post-info d-flex mb-2">
 												<b:if cond='data:this.allBylineItems.timestamp'>
 													<span class="me-3">
@@ -510,9 +510,9 @@
 											</div>
 										</b:if>
 										<div class="mt-1">
-											<a target="_blank" rel="noopener nofollow" class='text-decoration-none fw-bold text-dark' expr:href='data:post.author.profileUrl'>
-												<data:post.author.name/>
-											</a>
+											<b:tag cond="data:post.author.profileUrl" class="text-decoration-none" expr:href="data:post.author.profileUrl" target="_blank" rel="noopener nofollow" name='a'>
+												<span class='fw-bold text-dark'><data:post.author.name/></span>
+											</b:tag>
 											<p>
 												<data:post.author.aboutMe/>
 											</p>

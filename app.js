@@ -302,7 +302,7 @@ function relatedPost()
 					if (post.media$thumbnail) {
 						data.image = post.media$thumbnail.url.replace("/s72-c/","/w150/");
 					}else{
-						data.image = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPXk2ZddRceCKCDDinODgLudn_NBeYZhp9vcTtROpXBEowyFguULTh__DLiheEmtdKg_vn80qRHIPUTCyyUAZHaXBGzWedomeMJViKX05NIdRKu0o6eF_xeHN--ub4n5mh8r-PAiHnTeDWYwA8pHQc-e4U6H6NZqbp5HLerels-9IiDIoJMr4PQJC1-Q/w150/noimage-blogger.jpg';
+						data.image = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3Ia32aeortEtnG6libJiXjj6It8o5ikSjQEaPSvLK09ORfnWovo0FQX25VeAB-cSySlozaol3LZ-9C7BVpfeMMcxtEE7SxW-BCLVX4wwywof7kiBCp8nsHbre7ScleqehuZzY0G17M1mBV1H-KzYd1QW098SZzEAHE0GecLG5u2ULhnEYtKTsWUMp/w300/no-image.jpg';
 					}
 
 					posts.push(data);
