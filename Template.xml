@@ -112,17 +112,6 @@
 
 	<b:comment>CSS Internal</b:comment>
 	<style type="text/css">
-		.post-card .post-image img {
-		max-width:140px;
-		padding: 0;
-		}
-		.post-detail .post-content .separator {
-		margin:0;
-		}
-		#carouselTrending img {
-		min-height:initial;
-		max-height:initial;
-		}
 	</style>
 
 	<b:comment>JS External</b:comment>
@@ -933,6 +922,11 @@
 						</ul>
 					</nav>
 
+					<b:comment>Back to top button</b:comment>
+					<button type="button" class="btn btn-danger rounded-circle btn-floating btn-sm" id="btn-back-to-top">
+						<i class="bi bi-arrow-up"></i>
+					</button>
+
 					<b:comment>Toast</b:comment>
 					<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100 fixed-bottom mb-2">
 						<div id="main-toast" class="toast text-bg-dark bg-dark" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-animation="true">
@@ -958,20 +952,14 @@
 
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@093dbcf6cc9457db271ddd8e8b5f1750c10e7b8d/app.css" />
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@29e52b952e1da058ab3dbaafe510421e9a94688c/app.css" />
 
 			</b:includable>
 			<b:includable id='jsx'>
 				<b:comment>insert js external here</b:comment>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.bundle.min.js" integrity="sha512-ndrrR94PW3ckaAvvWrAzRi5JWjF71/Pw7TlSo6judANOFCmz0d+0YE+qIGamRRSnVzSvIyGs4BTtyFMm3MT/cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-				<script type="module">
-					import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
-				</script>
-
-				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@093dbcf6cc9457db271ddd8e8b5f1750c10e7b8d/app.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@29e52b952e1da058ab3dbaafe510421e9a94688c/app.js"></script>
 			</b:includable>						
 			<b:includable id='body'>
 				&lt;!--<body/>--&gt;
