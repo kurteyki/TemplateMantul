@@ -26,8 +26,8 @@ document.addEventListener("turbo:load", function() {
 	/* load darkMode */
 	darkMode();			
 
-	/* load postIndexPagination */
-	postIndexPagination();		
+	/* load postPaginationMultiple */
+	postPaginationMultiple();
 
 	/* Load adsMove */
 	adsMove();
@@ -138,9 +138,9 @@ function carouselIndex(){
 }
 
 /* post index pagination */
-function postIndexPagination()
+function postPaginationMultiple()
 {
-	let postIndex = $("#postIndexPagination"), postIndexHasLoaded = 0;
+	let postIndex = $("#postPaginationMultiple"), postIndexHasLoaded = 0;
 	if (postIndex.length > 0) {	
 		$(window).on("load scroll", function() {
 			if(($(window).scrollTop() + $(window).height()) >= ($(document).height() - 100) && !postIndexHasLoaded) {
@@ -149,25 +149,25 @@ function postIndexPagination()
 				postIndexHasLoaded = 1;
 
 				/* get and check pagination link */
-				var postIndexPaginationLink = $("#postIndexPagination a.pagination-link"),
-				postIndexPaginationLinkUrl = postIndexPaginationLink.attr('href'),
-				postIndexPaginationLinkLoading = postIndexPaginationLink.data('loading');
+				var postPaginationMultipleLink = $("#postPaginationMultiple a.pagination-link"),
+				postPaginationMultipleLinkUrl = postPaginationMultipleLink.attr('href'),
+				postPaginationMultipleLinkLoading = postPaginationMultipleLink.data('loading');
 
-				if (postIndexPaginationLinkUrl !== undefined) {
+				if (postPaginationMultipleLinkUrl !== undefined) {
 
 					/* send animation */
-					$("#postIndexPagination").html(`<div class="text-center py-3"><div class="spinner-border text-primary" role="status">
-					<span class="visually-hidden">${postIndexPaginationLinkLoading}</span>
-					</div></div>`);
+					$("#postPaginationMultiple").html(`<div class="text-center py-3"><div class="spinner-border text-primary" role="status">
+						<span class="visually-hidden">${postPaginationMultipleLinkLoading}</span>
+						</div></div>`);
 
 					$.ajax({
-						url: postIndexPaginationLinkUrl,
+						url: postPaginationMultipleLinkUrl,
 						dataType: 'html',
 						success: function(output) {												
 
 							setTimeout(function() {
 								/* replace pagination with new link */
-								$("#postIndexPagination").html($(output).find('#postIndexPagination a.pagination-link').clone());
+								$("#postPaginationMultiple").html($(output).find('#postPaginationMultiple a.pagination-link').clone());
 
 								/* append new posts */
 								$('#postIndex').append($('#postIndex', $(output).wrap("<div/>")).html()); 
@@ -182,8 +182,7 @@ function postIndexPagination()
 						}
 					})
 				}else{
-					/* remove pagination link */
-					$("#postIndexPagination").remove();
+					$("#postPaginationMultiple").html(`<div class="text-center text-success fw-bold fs-3"><i class="bi bi-check-circle"></i></div>`);
 				}
 
 			}
@@ -214,10 +213,10 @@ function relatedPost()
 
 		/* first give animation */
 		relatedPost.html(`
-		<div class="text-center py-3"><div class="spinner-grow text-primary" role="status">
-		<span class="visually-hidden">Loading...</span>
-		</div></div>
-		`);
+			<div class="text-center py-3"><div class="spinner-grow text-primary" role="status">
+			<span class="visually-hidden">Loading...</span>
+			</div></div>
+			`);
 
 		/* define variable for temp data */
 		let async_request=[],
