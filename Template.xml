@@ -1116,7 +1116,7 @@
 
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-				<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@0bb03c639ebe5ac4da67219856df661b40509dc7/app.css" /> -->
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@30183b68a3b29157ac229da131b2d324d2752ce9/app.css" />
 
 			</b:includable>
 			<b:includable id='jsx'>
@@ -1125,9 +1125,9 @@
 
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@0bb03c639ebe5ac4da67219856df661b40509dc7/turbo-hotwire.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@30183b68a3b29157ac229da131b2d324d2752ce9/turbo-hotwire.js"></script>
 
-				<!-- <script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@0bb03c639ebe5ac4da67219856df661b40509dc7/app.js"></script> -->
+				<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@30183b68a3b29157ac229da131b2d324d2752ce9/app.js"></script>
 			</b:includable>						
 			<b:includable id='body'>
 				&lt;!--<body/>--&gt;
