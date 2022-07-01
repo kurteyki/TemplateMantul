@@ -24,6 +24,19 @@ Made By Irfan
 If you like this template give me [Donate](https://tools.kurteyki.com/) :)
 
 ## Change Log
+1 Juli 2022
+- Sidebar Layout
+- change layout PageList
+- add copyright
+- add credit 
+
+30 Juni 2022
+- Add ContactForm
+- Add PageList
+- Fix Pagination Multiple
+- css Comment Tree
+- Fix Page Detail
+
 29 Juni 2022
 - Merge Turbo hotwire to app.js
 - Fix CSS
