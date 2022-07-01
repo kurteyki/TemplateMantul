@@ -183,7 +183,7 @@
 								<b:widget-setting name='displayWidth'>60</b:widget-setting>
 							</b:widget-settings>
 							<b:includable id='main' var='this'>
-								<nav id="main-header" class="navbar navbar-expand-md navbar-light flex-nowrap bg-white px-3 px-md-4 py-2 py-md-3 justify-content-between border-bottom">
+								<nav id="main-header" class="navbar navbar-expand-md navbar-light bg-white px-3 px-md-4 py-2 py-md-3 justify-content-between border-bottom">
 									<b:if cond='data:image'>
 										<a class='navbar-brand p-0 d-flex align-items-center text-truncate' expr:href='data:blog.homepageUrl' expr:title='data:title'>
 											<img class='me-2' expr:alt='data:title ? data:title : data:messages.image' expr:src='data:image' expr:title='data:title'/> 
