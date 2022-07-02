@@ -4,11 +4,24 @@ Blogger Template Mobile Layout, Mantul
 ![Template Mantul](https://github.com/kurteyki/TemplateMantul/blob/main/preview.png?raw=true)
 
 ## Featured
-- SPA
-- Mobile Menu (Categories, Archive, Sidebar)
+- Featured Post
+- Header
+- Translate
+- Search Form
 - Dark Mode
+- Popular Post
+- Categories
+- Archive
+- Profile
+- Social Links
+- PageList
+- Pagination on Scroll
+- Related Post
+- Comment Tree Style
 - Ads Feed, Post Middle, Post Bottom
-- Remove Blogger CSS and JS
+- Remove Blogger CSS
+- Schema.org
+- Back to Top
 
 ## Build With
 - Bootstrap 5
@@ -21,14 +34,19 @@ Made By Irfan
 - [Instagram](https://instagram.com/irfan.ycd)
 - [Twitter](https://twitter.com/irfan.ycd)
 
-If you like this template give me [Donate](https://tools.kurteyki.com/) :)
+If you like this template give me [Donate](https://tools.kurteyki.com/donate) :)
 
 ## Change Log
+2 Juli 2022
+- add schema.org
+- comment links only admin
+
 1 Juli 2022
 - Sidebar Layout
 - change layout PageList
 - add copyright
 - add credit 
+- fix bug if not have label (widget will not render)
 
 30 Juni 2022
 - Add ContactForm

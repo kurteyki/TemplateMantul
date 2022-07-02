@@ -5,14 +5,20 @@ body{background:#f7f7f7}
 button.close:focus{outline:none;box-shadow:none}
 .btn .bi{position:relative;top:0}
 .btn:focus,.btn.focus{box-shadow:none!important}
+
+/* main */
 #main{background:#fff}
 #main-header .logo-only img{width:35px}
 #main-header .text-logo img{width:125px}
 #main-search button{border:1px solid #ced4da}
 #main-search input:focus{box-shadow:none;border-color:#ced4da}
 #main-nav .nav-link:hover,#main-nav .nav-link.active{background:#dff5ff}
+
+/* carousel */
 #carouselTrending img{}
 #carouselTrending .carousel-caption{background:rgb(0 0 0 / 50%)}
+
+/* post card */
 .post-card{}
 .post-card:hover,.post-card:focus{background:#dff5ff}
 .post-card .post-image img{width:140px;}
@@ -46,7 +52,7 @@ button.close:focus{outline:none;box-shadow:none}
 /* dark mode */
 body.dark-mode{background:#15202b;color:#fff}
 body.dark-mode #main{background:#1c2834}
-body.dark-mode #main-header,body.dark-mode #main-nav{border-color:#444!important}
+body.dark-mode #main-header, body.dark-mode #main-nav, body.dark-mode #authorPost, body.dark-mode #commentPost, body.dark-mode #relatedPost {border-color: #444!important}
 body.dark-mode #navbarMobile .btn,body.dark-mode #navBarIconMobile .btn{color:#fff}
 body.dark-mode #main-categories .card-header,body.dark-mode #main-archive .card-header,body.dark-mode #main-sidebar .card-header{background:#222}
 body.dark-mode #main-categories a,body.dark-mode #main-archive a,body.dark-mode #main-sidebar a{color:#fff}
@@ -62,18 +68,16 @@ body.dark-mode .alert-light{--bs-alert-color:#fff;--bs-alert-bg:#212529;--bs-ale
 .ads-square{width:300px;height:250px;background:#428bca;color:#fff;line-height:250px;text-align:center;margin:auto}
 .ads-horizontal{width:100%;height:90px;background:#428bca;color:#fff;line-height:90px;text-align:center}
 
+/* translate */
+.goog-te-gadget-simple:after {content: ""; position: relative; height: 100%; width: 50px; padding: 10px; z-index: 2; background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23000' class='bi bi-translate' viewBox='0 0 16 16'> <path d='M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z'/> <path d='M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z'/> </svg>") center / 12px no-repeat; background-size: 20px 20px; } 
+.dark-mode .goog-te-gadget-simple:after {background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FFF' class='bi bi-translate' viewBox='0 0 16 16'> <path d='M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z'/> <path d='M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z'/> </svg>") center / 12px no-repeat; background-size: 20px 20px; } .goog-te-gadget-simple img,img.goog-te-gadget-icon,.goog-te-menu-value span{display:none!important}
+.goog-te-menu-frame {box-shadow: none !important; } 
+.goog-te-gadget-simple {background-color: transparent !important; border-left: none !important; border-top: none !important; border-bottom: none !important; border-right: none !important; border-radius: 4px; }
+/* fix main-header sticky when translate is active */
+.translated-ltr .sticky-top, .translated-rtl .sticky-top {top:40px}		
+
 /* back to top button */
-#btn-back-to-top {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	display: none;
-	z-index:10000
-}
+#btn-back-to-top {position: fixed; bottom: 20px; right: 20px; display: none; z-index:10000 } 
 @media (max-width:768px){
-	#btn-back-to-top {
-		bottom: 65px;
-		right: 0px;
-		border-radius: 10px 0 0 10px !important;
-	}
+	#btn-back-to-top {bottom: 65px; right: 0px; border-radius: 10px 0 0 10px !important; } 
 }
