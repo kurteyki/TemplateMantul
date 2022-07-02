@@ -142,7 +142,7 @@
 	<b:include data='blog' name='google-analytics'/>
 
 	<b:comment>Schema (for SEO)</b:comment>
-	<script type="application/ld+json">[{"@context": "http://schema.org", "@type": "WebSite", "@id": "<data:blog.canonicalHomepageUrl.jsonEscaped/>#website", "url": "<data:blog.canonicalHomepageUrl.jsonEscaped/>", "name": "<data:blog.title.jsonEscaped/>", "potentialAction": {"@type": "SearchAction", "target": "<data:blog.canonicalHomepageUrl.jsonEscaped/>search?q={q}", "query-input": "required name=q"} } ,{"@context": "http://schema.org/", "@type": "Organization", "@id": "<data:blog.canonicalHomepageUrl.jsonEscaped/>#organization", "name": "<data:blog.title.jsonEscaped/>", "url": "<data:blog.canonicalHomepageUrl.jsonEscaped/>", "logo": {"@type": "ImageObject", "url": "https://lh3.googleusercontent.com/ULB6iBuCeTVvSjjjU1A-O8e9ZpVba6uvyhtiWRti_rBAs9yMYOFBujxriJRZ-A=h60", "caption": "<data:blog.title.jsonEscaped/>"} } <b:if cond='data:view.isSingleItem'> ,{"@context": "http://schema.org", "@type": "WebPage", "@id": "<data:blog.url.jsonEscaped/>#webpage", "url": "<data:blog.url.jsonEscaped/>", "name": "<data:blog.title.jsonEscaped/>", <b:if cond='data:blog.metaDescription'> "description": "<data:blog.metaDescription.jsonEscaped/>", </b:if> "isPartOf": {"@id": "<data:blog.url.jsonEscaped/>#website"}, <b:if cond='data:view.featuredImage'> "primaryImageOfPage": {"@id": "<data:blog.url.jsonEscaped/>#primaryimage"} </b:if> } </b:if> <b:if cond='data:view.featuredImage'> ,{"@type": "ImageObject", "@id": "<data:blog.url.jsonEscaped/>#primaryimage", "url": "<data:view.featuredImage/>", "contentUrl": "<data:view.featuredImage/>"} </b:if> ]</script>
+	<script type="application/ld+json">[{"@context": "http://schema.org", "@type": "WebSite", "@id": "<data:blog.canonicalHomepageUrl.jsonEscaped/>#website", "url": "<data:blog.canonicalHomepageUrl.jsonEscaped/>", "name": "<data:blog.title.jsonEscaped/>", "potentialAction": {"@type": "SearchAction", "target": "<data:blog.canonicalHomepageUrl.jsonEscaped/>search?q={q}", "query-input": "required name=q"} } ,{"@context": "http://schema.org/", "@type": "Organization", "@id": "<data:blog.canonicalHomepageUrl.jsonEscaped/>#organization", "name": "<data:blog.title.jsonEscaped/>", "url": "<data:blog.canonicalHomepageUrl.jsonEscaped/>", "logo": {"@type": "ImageObject", "url": "https://lh3.googleusercontent.com/ULB6iBuCeTVvSjjjU1A-O8e9ZpVba6uvyhtiWRti_rBAs9yMYOFBujxriJRZ-A=h60", "caption": "<data:blog.title.jsonEscaped/>"} } <b:if cond='data:view.isSingleItem'> ,{"@context": "http://schema.org", "@type": "WebPage", "@id": "<data:blog.url.jsonEscaped/>#webpage", "url": "<data:blog.url.jsonEscaped/>", "name": "<data:blog.title.jsonEscaped/>", <b:if cond='data:blog.metaDescription'> "description": "<data:blog.metaDescription.jsonEscaped/>", </b:if> "isPartOf": {"@id": "<data:blog.url.jsonEscaped/>#website"} <b:if cond='data:view.featuredImage'> ,"primaryImageOfPage": {"@id": "<data:blog.url.jsonEscaped/>#primaryimage"} </b:if> } </b:if> <b:if cond='data:view.featuredImage'> ,{"@type": "ImageObject", "@id": "<data:blog.url.jsonEscaped/>#primaryimage", "url": "<data:view.featuredImage/>", "contentUrl": "<data:view.featuredImage/>"} </b:if> ]</script>
 
 	&lt;!--</head>--&gt;&lt;/head&gt;
 	<body class="d-flex h-100">
@@ -506,6 +506,9 @@
 											"author": {
 											"@type": "Person",
 											"name": "<data:post.author.name.jsonEscaped/>"
+											<b:if cond='data:post.author.profileUrl'>
+												,"url": "<data:post.author.profileUrl.jsonEscaped/>"
+											</b:if>
 											},
 											"image": {
 											"@type": "ImageObject",
@@ -1187,7 +1190,7 @@
 
 					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-					<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@30183b68a3b29157ac229da131b2d324d2752ce9/app.css" />
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@c05c696e53c8b817d9f8f85d611b1965981e9559/app.css" />
 
 				</b:includable>
 				<b:includable id='jsx'>
@@ -1196,9 +1199,9 @@
 
 					<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-					<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@30183b68a3b29157ac229da131b2d324d2752ce9/turbo-hotwire.js"></script>
+					<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@c05c696e53c8b817d9f8f85d611b1965981e9559/turbo-hotwire.js"></script>
 
-					<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@30183b68a3b29157ac229da131b2d324d2752ce9/app.js"></script>
+					<script src="https://cdn.jsdelivr.net/gh/kurteyki/TemplateMantul@c05c696e53c8b817d9f8f85d611b1965981e9559/app.js"></script>
 
 				</b:includable>						
 				<b:includable id='body'>
