@@ -40,6 +40,7 @@ If you like this template give me [Donate](https://tools.kurteyki.com/donate) :)
 2 Juli 2022
 - add schema.org
 - comment links only admin
+- fix blogger custom css
 
 1 Juli 2022
 - Sidebar Layout

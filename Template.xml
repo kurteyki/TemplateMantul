@@ -81,20 +81,24 @@
 	<b:comment>CSS External</b:comment>
 	<b:include name='cssx'/>
 
-	<b:if cond='data:view.isLayoutMode'>
-		<b:skin><![CDATA[ 
-			/*
-			<Group description="Main">
-				<Variable name="mainColor" description="MainColor" type="color" default="#FFFFFF" hideEditor="false"  value="#FFFFFF"/>
-				<Variable name="mainBackground" description="mainBackground" type="color" default="#FFFFFF" hideEditor="false"  value="#FFFFFF"/>	
-			</Group>
+	<b:skin><![CDATA[ 
+		/*
+		<Group description="Main">
+			<Variable name="mainColor" description="MainColor" type="color" default="#FFFFFF" hideEditor="false"  value="#FFFFFF"/>
+			<Variable name="mainBackground" description="mainBackground" type="color" default="#FFFFFF" hideEditor="false"  value="#FFFFFF"/>	
+		</Group>
 
-			<Group description="Theme Settings">
-				<Variable name="googleTranslate" description="Google Translate" type="length" default="1px" hideEditor="false"  value="1px" min="0px" max="1px"/>
-			</Group>
-			*/
-			]]>
-		</b:skin>
+		<Group description="Theme Settings">
+			<Variable name="googleTranslate" description="Google Translate" type="length" default="1px" hideEditor="false"  value="1px" min="0px" max="1px"/>
+		</Group>
+		*/
+
+		.CSS_LIGHTBOX {
+		z-index:2000 !important
+		}		
+		]]>
+	</b:skin>
+	<b:if cond='data:view.isLayoutMode'>
 		<b:template-skin>
 			<![CDATA[
 			body#layout {min-width:768px;padding:100px 20px 0 !important;}
@@ -283,7 +287,7 @@
 													<div class="carousel-item" data-bs-interval="5000">
 														<b:class cond='data:x == 0' name='active'/>
 														<a expr:href='data:post.url'>
-															<img loading="lazy" expr:src='data:post.featuredImage ? resizeImage(data:post.featuredImage, 1200) : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3Ia32aeortEtnG6libJiXjj6It8o5ikSjQEaPSvLK09ORfnWovo0FQX25VeAB-cSySlozaol3LZ-9C7BVpfeMMcxtEE7SxW-BCLVX4wwywof7kiBCp8nsHbre7ScleqehuZzY0G17M1mBV1H-KzYd1QW098SZzEAHE0GecLG5u2ULhnEYtKTsWUMp/w1200/no-image.jpg"' class="d-block w-100" expr:alt="data:post.title"/>
+															<img loading="lazy" expr:src='data:post.featuredImage ? resizeImage(data:post.featuredImage, 1200) : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3Ia32aeortEtnG6libJiXjj6It8o5ikSjQEaPSvLK09ORfnWovo0FQX25VeAB-cSySlozaol3LZ-9C7BVpfeMMcxtEE7SxW-BCLVX4wwywof7kiBCp8nsHbre7ScleqehuZzY0G17M1mBV1H-KzYd1QW098SZzEAHE0GecLG5u2ULhnEYtKTsWUMp/w1200-h380-p-k-no-nu/no-image.jpg"' class="d-block w-100" expr:alt="data:post.title"/>
 															<div class="carousel-caption">
 																<strong><data:post.title/></strong>
 															</div>
@@ -304,11 +308,16 @@
 								</b:widget>
 								<b:widget cond='not data:view.search.query and not data:view.isPreview and not data:view.isError' id='HTML601' locked='true' title='Ads Top' type='HTML' version='2' visible='true'>
 									<b:widget-settings>
-										<b:widget-setting name='content'><![CDATA[<div class="text-center">
-											<a class="btn btn-primary" href="https://github.com/kurteyki/TemplateMantul/archive/refs/heads/main.zip" target="_blank" rel="nofollow">
-												<i class="bi bi-github"></i> Download
+										<b:widget-setting name='content'><![CDATA[<div class="d-flex bg-warning text-dark fw-bold text-center justify-content-center">	
+											<a target="_blank" rel="nofollow noopener" class="text-decoration-none text-dark" href="https://github.com/kurteyki/TemplateMantul">
+												<i class="bi bi-github"></i> Download this Template
 											</a>
-										</div>]]></b:widget-setting>
+											&nbsp; or &nbsp;
+											<a target="_blank" rel="nofollow noopener" class="text-decoration-none text-primary" href="https://t.me/kurteyki">
+												<i class="bi bi-telegram"></i> Join Telegram
+											</a>
+										</div>
+										]]></b:widget-setting>
 									</b:widget-settings>
 									<b:includable id='main'>      
 										<div class='ads-horizontal'>
@@ -471,9 +480,11 @@
 													</div>
 												</b:if>
 											</b:if>
-											<article class='post-content'>
-												<data:post.body/>
-											</article>
+											<div class='post-body' expr:id='&quot;post-body-&quot; + data:post.id'>
+												<article class='post-content'>
+													<data:post.body/>
+												</article>
+											</div>
 										</div>
 										<b:if cond='data:view.isPost'>
 											<b:include cond='data:this.allBylineItems.labels OR data:post.location' name='infoPost'/>
